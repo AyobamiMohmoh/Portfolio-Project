@@ -80,7 +80,7 @@ ORDER BY PP.FirstName ASC;
 --from the Person.CountryRegion Table. You need to compare the total sales for the current 
 --year (SalesYTD) and the previous year (saleslastYear) for each country and calculate the 
 --difference between these two figures. Additionally, you want to rank the countries based on 
---their current year’s sales in descending order. How would you write a SQL query to retrieve 
+--their current yearâ€™s sales in descending order. How would you write a SQL query to retrieve 
 --the country names, total sales for the current year, total sales for the last year, and the sales 
 --difference?
 
@@ -250,10 +250,10 @@ WITH EmployeeData AS (
     FROM HumanResources.Employee
 )
 SELECT BusinessEntityID, HireDate, HiredMonth,
-    CASE 
-        WHEN HiredMonth IN('January', 'February', 'March',  'April')  THEN 'No_Pressure'
-        WHEN HiredMonth IN (' May', 'June', 'July',  'August')   THEN 'Little_Pressure'
-        WHEN HiredMonth IN ('september', 'October')  THEN ' MOre_Pressure'
+    CASEÂ 
+        WHEN HiredMonth IN('January', 'February', 'March',Â  'April')Â  THEN 'No_Pressure'
+        WHEN HiredMonth IN (' May', 'June', 'July',Â  'August')Â  Â THEN 'Little_Pressure'
+        WHEN HiredMonth IN ('september', 'October')Â  THEN ' MOre_Pressure'
         ELSE 'High_Pressure'
     END AS Hired_Criteria
 FROM EmployeeData;
